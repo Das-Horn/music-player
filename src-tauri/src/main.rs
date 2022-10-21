@@ -25,7 +25,7 @@ fn scan_dir(path: String) -> String {
 
 fn main() {
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![get_os_dir, scan_dir])
+        .invoke_handler(tauri::generate_handler![get_os_dir, scan_dir]) // Add additional commands from above here
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

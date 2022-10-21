@@ -1,18 +1,13 @@
 pub struct Lib;
-pub struct Song {
-    name: String,
-    path: String,
-}
 
 use json::*;
 use std::fs;
 
 impl Lib {
     pub fn find_music(path: String) -> String {
-        println!("Current Reading Directory : {:?}", path);
         let mut song = object!{
             songs: []
-        };
+        }; // Init JSON return
         let mut counter = 0;
         let x = fs::read_dir(path).unwrap();
 
@@ -27,7 +22,22 @@ impl Lib {
             counter += 1;
         }
         // Return the song variable to JS
-        // println!("{}",stringify(song));
         return stringify(song);
+    }
+
+    pub fn save_def_conf() {
+        // TODO : ADD default config save
+    }
+
+    pub fn read_conf() {
+        // TODO : Read config File
+    }
+
+    pub fn write_conf() {
+        // TODO : Write new config
+    }
+
+    pub fn get_song_info() {
+        // TODO : Read Song Metadata
     }
 }

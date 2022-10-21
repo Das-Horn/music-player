@@ -15,7 +15,6 @@
         // Read File
         let audioFile = new Blob([await readBinaryFile(song.path)], {type : 'audio/mp3  '});
         //set source
-
         x.src = URL.createObjectURL(audioFile);
         console.info("Now Playing : "+song.path);
     }

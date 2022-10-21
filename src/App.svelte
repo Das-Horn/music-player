@@ -19,6 +19,9 @@
     console.table(MUSIC_ARRAY.songs);
   }
 
+
+  
+
 </script>
 
 <main class="container">
